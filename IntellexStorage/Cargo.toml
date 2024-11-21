@@ -1,0 +1,15 @@
+[package]
+name = "IntellexStorage"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+near-sdk = "4.0.0-rc.1"
+near-sdk-macros = "4.0.0-rc.1"
+
+
+[lib]
+crate-type = ["cdylib", "rlib"] # Necessary for compiling to WebAssembly
+
+[patch.crates-io]
+parity-secp256k1 = { git = "https://github.com/paritytech/rust-secp256k1.git", branch = "master" }
